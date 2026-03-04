@@ -1,4 +1,4 @@
-name = "hugocloudf"
+name = "hugo-cloudf"
 
 [build]
 command = "./build.sh"
