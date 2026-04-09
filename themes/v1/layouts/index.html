@@ -7,27 +7,63 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <ul class="mobile-nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">MyWebsite</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-    <header class="hero">
-        <h1>Welcome to My Website</h1>
-        <p>Your success starts here</p>
-        <a href="#services" class="btn">Learn More</a>
-    </header>
-    <section class="messages">
+
+    <!-- Hero Section with Image Slider -->
+    <section class="hero" id="home">
+        <div class="slider">
+            <div class="slide fade">
+                <img src="https://via.placeholder.com/1200x500/FF6B6B/FFFFFF?text=Image+1" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="https://via.placeholder.com/1200x500/4ECDC4/FFFFFF?text=Image+2" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+                <img src="https://via.placeholder.com/1200x500/45B7D1/FFFFFF?text=Image+3" alt="Slide 3">
+            </div>
+
+            <!-- Navigation buttons -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+
+        <!-- Slider dots -->
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Messages Section -->
+    <section class="messages" id="about">
         <h2>Latest Updates</h2>
         <p>We are excited to announce our new service!</p>
         <p>Stay tuned for more updates.</p>
     </section>
-    <footer class="mobile-footer">
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
         <p>Contact us: info@example.com</p>
         <p>&copy; 2026 My Website</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
